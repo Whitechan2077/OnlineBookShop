@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Hôm nay sẽ nói về thymeleaf thymeleaf xin hơn jsp và cấu trúc viết của thymeleaf là attribute trong thẻ html
+    <br>
+    các thẻ cơ bản
+    <br>
+    thẻ th:ech=" item : ${Collections,Arrays}" dùng để lặp qua các phần tử trong collection array được send từ controller
+    <br>
+    thẻ th:text="${var}" thẻ dùng để hiện thị dữ liệu văn bản đối tượng
+    <br>
+    thẻ th:src ="@{/path}" dùng để thay đổi thuộc tính của thẻ
+        th:href = "@{/path}" tác dụng tương tự
+    <br>
+    thẻ th:attr="id = ${id động}, class=${class động}"
+    <br>
+    thẻ th:with="tênBiến = ${giá trị động}"
+    <br>
+    th:switch = ${condition}
+        th:case=" "
+    <br>
+    th:object="${}" quy định đối tượng ánh xạ từ view vào java
+    để bắt model từ view thì bên controller chúng ta có (@ModelAttribute User user)th:object{user}
+</p>
+<h1>Xử lý form</h1>
+<form action="@{/postMaping}" method="post">
+    <input type="text" th:field="*{username}" placeholder="Username">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

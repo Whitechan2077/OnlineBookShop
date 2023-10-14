@@ -1,13 +1,13 @@
-package com.workshop.onlinebookestore;
+package com.example.thymleaf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OnlineBookeStoreApplication {
+public class ThymleafApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OnlineBookeStoreApplication.class, args);
+        SpringApplication.run(ThymleafApplication.class, args);
     }
 
 }
