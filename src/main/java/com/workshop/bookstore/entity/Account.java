@@ -22,6 +22,10 @@ public class Account {
     @ManyToOne
     @JoinColumn(name = "RoleID", referencedColumnName = "RoleID")
     private Role roleByRoleId;
+    @OneToMany(mappedBy = "accountByThemBoi")
+    private Collection<ChiTietTacGia> chiTietTacGiasByUid;
+    @OneToMany(mappedBy = "accountByCapNhatBoi")
+    private Collection<ChiTietTacGia> chiTietTacGiasByUid_0;
     @OneToMany(mappedBy = "accountByUid")
     private Collection<DiaChi> diaChisByUid;
     @OneToMany(mappedBy = "accountByUid")
@@ -62,6 +66,10 @@ public class Account {
     private Collection<Sach> sachesByUid;
     @OneToMany(mappedBy = "accountByCapNhaBoi")
     private Collection<Sach> sachesByUid_0;
+    @OneToMany(mappedBy = "accountByThemBoi")
+    private Collection<TacGia> tacGiasByUid;
+    @OneToMany(mappedBy = "accountByCapNhatBoi")
+    private Collection<TacGia> tacGiasByUid_0;
 
     public Integer getUid() {
         return uid;
@@ -114,6 +122,22 @@ public class Account {
 
     public void setRoleByRoleId(Role roleByRoleId) {
         this.roleByRoleId = roleByRoleId;
+    }
+
+    public Collection<ChiTietTacGia> getChiTietTacGiasByUid() {
+        return chiTietTacGiasByUid;
+    }
+
+    public void setChiTietTacGiasByUid(Collection<ChiTietTacGia> chiTietTacGiasByUid) {
+        this.chiTietTacGiasByUid = chiTietTacGiasByUid;
+    }
+
+    public Collection<ChiTietTacGia> getChiTietTacGiasByUid_0() {
+        return chiTietTacGiasByUid_0;
+    }
+
+    public void setChiTietTacGiasByUid_0(Collection<ChiTietTacGia> chiTietTacGiasByUid_0) {
+        this.chiTietTacGiasByUid_0 = chiTietTacGiasByUid_0;
     }
 
     public Collection<DiaChi> getDiaChisByUid() {
@@ -274,5 +298,21 @@ public class Account {
 
     public void setSachesByUid_0(Collection<Sach> sachesByUid_0) {
         this.sachesByUid_0 = sachesByUid_0;
+    }
+
+    public Collection<TacGia> getTacGiasByUid() {
+        return tacGiasByUid;
+    }
+
+    public void setTacGiasByUid(Collection<TacGia> tacGiasByUid) {
+        this.tacGiasByUid = tacGiasByUid;
+    }
+
+    public Collection<TacGia> getTacGiasByUid_0() {
+        return tacGiasByUid_0;
+    }
+
+    public void setTacGiasByUid_0(Collection<TacGia> tacGiasByUid_0) {
+        this.tacGiasByUid_0 = tacGiasByUid_0;
     }
 }

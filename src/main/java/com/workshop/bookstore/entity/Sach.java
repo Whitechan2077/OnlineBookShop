@@ -36,6 +36,8 @@ public class Sach {
     @Column(name = "Anh", nullable = true, length = 300)
     private String anh;
     @OneToMany(mappedBy = "sachByIdSach")
+    private Collection<ChiTietTacGia> chiTietTacGiasByIdSach;
+    @OneToMany(mappedBy = "sachByIdSach")
     private Collection<GioHangChiTiet> gioHangChiTietsByIdSach;
     @OneToMany(mappedBy = "sachByIdSach")
     private Collection<HoaDonChiTiet> hoaDonChiTietsByIdSach;
@@ -147,6 +149,14 @@ public class Sach {
     @Override
     public int hashCode() {
         return Objects.hash(idSach, tenSach, taiBan, giaTien, ngayXuatBan, noiDung, ngayThem, trongLuong, anh);
+    }
+
+    public Collection<ChiTietTacGia> getChiTietTacGiasByIdSach() {
+        return chiTietTacGiasByIdSach;
+    }
+
+    public void setChiTietTacGiasByIdSach(Collection<ChiTietTacGia> chiTietTacGiasByIdSach) {
+        this.chiTietTacGiasByIdSach = chiTietTacGiasByIdSach;
     }
 
     public Collection<GioHangChiTiet> getGioHangChiTietsByIdSach() {
