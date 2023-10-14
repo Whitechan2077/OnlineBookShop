@@ -6,10 +6,12 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
+@Table(name = "Sach")
 public class Sach {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "IdSach", nullable = false)
+    @Basic
+    @Column(name = "IdSach")
     private Integer idSach;
     @Basic
     @Column(name = "TenSach", nullable = true, length = 255)
