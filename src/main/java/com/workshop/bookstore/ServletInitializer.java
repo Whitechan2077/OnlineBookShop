@@ -1,4 +1,4 @@
-package com.example.thymleaf;
+package com.workshop.bookstore;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
