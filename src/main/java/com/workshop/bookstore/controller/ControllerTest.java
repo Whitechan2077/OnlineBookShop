@@ -16,7 +16,7 @@ public class ControllerTest {
     BookRepository bookRepository;
     @GetMapping("")
     public String home(Model model){
-        model.addAttribute("allUser",accountService.findAll());
+//        model.addAttribute("allUser",accountService.findAll());
         return "Lythuyet";
     }
 }
