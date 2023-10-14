@@ -8,10 +8,32 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 @Service
-public class AccountService  {
+public class AccountService implements com.workshop.service.impl.Service<Account,Long> {
     @Autowired
     AccountRepository repository;
-    public Collection<Account> findAllAccount(){
+
+    @Override
+    public Collection<Account> findAll() {
         return  repository.findAll();
+    }
+
+    @Override
+    public Account findById(Long id) {
+        return null;
+    }
+
+    @Override
+    public void insert(Long e) {
+
+    }
+
+    @Override
+    public void update(Long e) {
+
+    }
+
+    @Override
+    public void delete(Long e) {
+
     }
 }
