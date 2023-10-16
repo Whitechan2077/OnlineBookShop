@@ -16,7 +16,11 @@ public class ControllerTest {
     BookRepository bookRepository;
     @GetMapping("")
     public String home(Model model){
-        model.addAttribute("allUser",accountService.findAll());
-        return "Lythuyet";
+//        bookRepository.findAll();
+        return "view/home/index";
+    }
+    @GetMapping("/admin")
+    public String admin(){
+        return "view/admin/index";
     }
 }

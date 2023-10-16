@@ -1,6 +1,5 @@
 package com.workshop.bookstore.service;
 
-import com.workshop.bookstore.entity.Account;
 import com.workshop.bookstore.repositories.AccountRepository;
 import com.workshop.bookstore.service.impl.Service;
 import org.springframework.beans.factory.annotation.Autowired;
