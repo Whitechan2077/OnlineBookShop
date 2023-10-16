@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping
 public class ControllerTest {
-    @Autowired
-    AccountService accountService;
-    @Autowired
-    BookRepository bookRepository;
     @GetMapping("")
     public String home(Model model){
 //        bookRepository.findAll();
